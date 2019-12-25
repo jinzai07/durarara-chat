@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+}
+.btn-primary {
+    width: 250px;
+    height: 35px;
+    background-color: gray;
+    border-radius: 20px;
+    border: 3px solid white;
+    color: white;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: white;
+    color: gray;
+    cursor: pointer;
+}
+.btn {
+    margin: 1.2em;
+}
