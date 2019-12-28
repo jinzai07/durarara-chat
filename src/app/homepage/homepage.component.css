@@ -1,21 +1,22 @@
 .main-wrapper {
-    height: 100vh;
-    width: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Roboto', sans-serif;
 }
+
 .main-logo {
     width: 400px;
     height: 400px;
     margin-top: 8em;
 }
+
 .input-wrapper {
     color: white;
     margin-top: 2em;
 }
+
 .password-input {
     border-radius: 20px;
     border-style: solid;
@@ -23,6 +24,7 @@
     padding: 10px;
     width: 250px;
 }
+
 .enter-button {
     margin-top: 10px;
 }
