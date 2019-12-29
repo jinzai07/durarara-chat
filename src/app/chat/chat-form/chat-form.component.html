@@ -1,0 +1,11 @@
+<form [formGroup]="messageForm" (ngSubmit)="onSendMessage()">
+    <div class="chat-message-wrapper">
+        <input class="chat-message"
+            id="message"
+            maxlength="50"
+            formControlName="message"
+            placeholder="Write a mesage ..."
+            (keydown)="handleSubmit($event)">
+        <button class="btn btn-secondary" type="submit" [disabled]="!messageForm.valid">POST!</button>
+    </div>
+</form>

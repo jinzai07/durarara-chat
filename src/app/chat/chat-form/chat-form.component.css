@@ -1,0 +1,19 @@
+.chat-message-wrapper {
+    background-color: #F8F8F8;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chat-message {
+    border-radius: 15px;
+    border: 2px #080808 solid;
+    width: 70%;
+    margin-top: 10px;
+    padding: 20px 10px;
+    font-size: 1.25rem;
+    font-family: inherit;
+    overflow: hidden;
+}

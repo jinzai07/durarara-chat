@@ -1,16 +1,26 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import { ChatBoxComponent } from './chat/chat-box/chat-box.component';
-import { HomepageComponent } from './homepage/homepage.component';
 import { ChatStartComponent } from './chat/chat-start/chat-start.component';
+import { ChatFormComponent } from './chat/chat-form/chat-form.component';
+import { HomepageComponent } from './homepage/homepage.component';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+import { environment } from 'src/environments/environment';
+
+import { AuthService } from './services/auth.service';
+import { ChatService } from './services/chat.service';
 
 @NgModule({
   declarations: [
@@ -18,15 +28,24 @@ import { ChatStartComponent } from './chat/chat-start/chat-start.component';
     HomepageComponent,
     ChatComponent,
     ChatBoxComponent,
-    ChatStartComponent
+    ChatStartComponent,
+    ChatFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule,
+    AngularFireModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    ChatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
