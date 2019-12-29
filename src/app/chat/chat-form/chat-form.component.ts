@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { ChatService } from 'src/app/services/chat.service';
+import { AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-chat-form',
@@ -9,17 +12,28 @@ import { ChatService } from 'src/app/services/chat.service';
   styleUrls: ['./chat-form.component.css']
 })
 export class ChatFormComponent implements OnInit {
-  messageForm: FormGroup
 
-  constructor(private fb: FormBuilder, private chatService: ChatService) { }
+  messageForm: FormGroup;
+  messageCollection: AngularFirestoreCollection;
+  messages: Observable<any>;
+
+  constructor(private fb: FormBuilder,
+              private chatService: ChatService,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.initializeForm();
+
+    this.activatedRoute.params
+    .subscribe(routeParam => {
+      this.messageCollection = this.chatService.getMessages(routeParam.chatroom);
+      this.messages = this.messageCollection.valueChanges();
+    });
+
   }
 
   onSendMessage(): void {
-    this.chatService.sendMessage(this.messageForm.value);
-    this.messageForm.patchValue({message: ''});
+    console.log('test send');
   }
 
   handleSubmit(event): void {
