@@ -1,6 +1,6 @@
 <div class="main main-wrapper">
     <app-chat-form></app-chat-form>
-    <div class="chat-wrapper">
+    <div class="chat-wrapper" *ngFor="let messages of messages$ | async">
         <div class="message-wrapper">
             <div class="user-icon">
                 <div class="user-initial-box">
@@ -8,19 +8,7 @@
                 </div>
             </div>
             <div class="message-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-        </div>
-    </div>
-    <div class="chat-wrapper">
-        <div class="message-wrapper">
-            <div class="user-icon">
-                <div class="user-initial-box">
-                    <span>S</span>
-                </div>
-            </div>
-            <div class="message-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>{{ messages.message }}</p>
             </div>
         </div>
     </div>
