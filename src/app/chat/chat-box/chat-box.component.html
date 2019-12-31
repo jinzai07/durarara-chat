@@ -1,5 +1,6 @@
 <div class="main main-wrapper">
     <app-chat-form></app-chat-form>
+    <mat-spinner *ngIf="isLoading" [diameter]="50" class="spinner"></mat-spinner>
     <div class="chat-wrapper" *ngFor="let messages of messages$ | async">
         <div class="message-wrapper">
             <div class="user-icon">

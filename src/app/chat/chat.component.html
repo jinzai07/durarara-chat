@@ -1,10 +1,11 @@
 <div class="main main-wrapper">
     <div class="chat-list-wrapper">
         <ul class="chatroom-list">
-            <a [routerLink]="['/chat', '1']"><li>Test room 1</li></a>
-            <a [routerLink]="['/chat', '2']"><li>Test room 2</li></a>
-            <mat-icon class="add-chatroom">add_box</mat-icon>
+            <li *ngFor="let chatroom of chatrooms$ | async" [routerLink]="[chatroom.name]" routerLinkActive="active-link" >
+                {{ chatroom.name }}
+            </li>
         </ul>
+        <mat-icon class="add-chatroom">add_box</mat-icon>
     </div>
     <div class="chat-main">
         <router-outlet></router-outlet>
