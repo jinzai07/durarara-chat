@@ -11,7 +11,7 @@
 .btn-primary {
     width: 250px;
     height: 35px;
-    background-color: gray;
+    background-color: #101010;
     border-radius: 20px;
     border: 2px solid white;
     color: white;
@@ -20,7 +20,7 @@
 
 .btn-primary:hover {
     background-color: white;
-    color: gray;
+    color: #101010;
     cursor: pointer;
 }
 
@@ -34,7 +34,7 @@
 .btn-secondary {
     width: 250px;
     height: 35px;
-    background-color: #F5F5F5;
+    background-color: #F0F0F0;
     border-radius: 20px;
     border: 2px solid #080808;
     color: #080808;
@@ -42,7 +42,7 @@
 
 .btn-secondary:hover {
     background-color: #080808;
-    color: #F5F5F5;
+    color: #F0F0F0;
     cursor: pointer;
 }
 
@@ -52,7 +52,7 @@ ul {
 }
 
 li {
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
     margin: 15px 0px;
 }
 
@@ -63,4 +63,13 @@ a {
 
 li:hover {
     background-color: rgba(248, 248, 248, .2);
+    cursor: pointer;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: white;
+}
+
+.spinner {
+    margin: auto;
 }
