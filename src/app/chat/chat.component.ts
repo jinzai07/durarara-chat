@@ -12,12 +12,14 @@ import { Chatroom } from '../models/chatroom.model';
 })
 export class ChatComponent implements OnInit {
   chatrooms$: Observable<Chatroom[]>;
+  isLoading: boolean = true;
   routeParamName: string;
 
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
     this.chatrooms$ = this.chatService.getChatroom().valueChanges();
+    this.chatrooms$.subscribe(() => this.isLoading = false);
   }
 
 }
