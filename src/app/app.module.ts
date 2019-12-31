@@ -14,7 +14,7 @@ import { ChatFormComponent } from './chat/chat-form/chat-form.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
 import { environment } from 'src/environments/environment';
@@ -37,10 +37,10 @@ import { ChatService } from './services/chat.service';
     BrowserAnimationsModule,
     MatIconModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [
-    AngularFirestore,
     AuthService,
     ChatService
   ],
