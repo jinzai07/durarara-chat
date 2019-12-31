@@ -4,6 +4,6 @@
         <mat-form-field>
             <input type="text" placeholder="New Chatroom name" formControlName="name" matInput>
         </mat-form-field>
-        <button class="btn btn-secondary" type="submit">CREATE!</button>
+        <button class="btn btn-secondary" type="submit" [disabled]="!newChatroom.valid">CREATE!</button>
     </div>
 </form>
