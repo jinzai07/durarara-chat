@@ -2,18 +2,23 @@ import { Injectable } from '@angular/core';
 
 import { Message } from '../models/message.model';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Chatroom } from '../models/chatroom.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
+  chatroomCollection: AngularFirestoreCollection<Chatroom>;
   messageCollection: AngularFirestoreCollection<Message>;
   chatroomName: string;
 
   constructor(private afs: AngularFirestore) { }
 
   getMessages(chatroom: string): AngularFirestoreCollection<Message> {
-    this.messageCollection = this.afs.collection(`${chatroom}`, ref => ref.orderBy('timeStamp', 'desc'));
+    this.messageCollection = this.afs.collection('messages', ref => {
+        return ref.where('chatroomName', '==', `${chatroom}`)
+                  .orderBy('timeStamp', 'desc')
+      })
     this.chatroomName = chatroom;
     return this.afs.collection(`${chatroom}`);
   }
@@ -25,6 +30,10 @@ export class ChatService {
     payload.chatroomName = this.chatroomName;
 
     this.messageCollection.add(payload);
+  }
+
+  getChatroom(): AngularFirestoreCollection<Chatroom> {
+    return this.afs.collection('chatroom');
   }
 
   getTimeStamp() {

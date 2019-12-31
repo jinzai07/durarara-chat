@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ChatService } from 'src/app/services/chat.service';
 import { ActivatedRoute } from '@angular/router';
+
+import { Observable } from 'rxjs';
+
+import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
   selector: 'app-chat-box',
