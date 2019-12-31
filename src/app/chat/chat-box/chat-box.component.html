@@ -1,15 +1,17 @@
 <div class="main main-wrapper">
     <app-chat-form></app-chat-form>
     <mat-spinner *ngIf="isLoading" [diameter]="50" class="spinner"></mat-spinner>
-    <div class="chat-wrapper" *ngFor="let messages of messages$ | async">
-        <div class="message-wrapper">
-            <div class="user-icon">
-                <div class="user-initial-box">
-                    <span>S</span>
+    <div class="chat-list-wrapper">
+        <div class="chat-wrapper" *ngFor="let messages of messages$ | async">
+            <div class="message-wrapper">
+                <div class="user-icon">
+                    <div class="user-initial-box">
+                        <span>S</span>
+                    </div>
                 </div>
-            </div>
-            <div class="message-content">
-                <p>{{ messages.message }}</p>
+                <div class="message-content">
+                    <p>{{ messages.message }}</p>
+                </div>
             </div>
         </div>
     </div>

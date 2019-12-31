@@ -46,3 +46,7 @@
     background-color: red;
     padding: 10px;
 }
+
+.chat-list-wrapper {
+    overflow: auto;
+}
