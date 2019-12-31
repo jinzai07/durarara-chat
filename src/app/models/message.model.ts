@@ -1,13 +1,13 @@
 export class Message {
     message: string;
-    timeStamp: Date;
+    timeStamp: string;
     displayName?: string;
-    chatroom: string;
+    chatroomName: string;
 
-    constructor(message, timeStamp, displayName, chatroom) {
+    constructor(message, timeStamp, displayName, chatroomName) {
         this.message = message;
         this.timeStamp = timeStamp;
         this.displayName = displayName;
-        this.chatroom = chatroom;
+        this.chatroomName = chatroomName;
     }
 }
