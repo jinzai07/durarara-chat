@@ -18,7 +18,7 @@
     box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.5);
 }
 
-.btn-primary:hover {
+.btn-primary:hover:enabled {
     background-color: white;
     color: #101010;
     cursor: pointer;
@@ -40,10 +40,18 @@
     color: #080808;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover:enabled {
     background-color: #080808;
     color: #F0F0F0;
     cursor: pointer;
+}
+
+.btn-secondary:disabled {
+    opacity: .8;
+}
+
+.btn-primary:disabled {
+    opacity: .8;
 }
 
 ul {
