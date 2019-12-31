@@ -122,9 +122,5 @@
         }
       }
     }
-  },
-  "defaultProject": "baccano",
-  "cli": {
-    "defaultCollection": "akita-schematics"
   }
 }
