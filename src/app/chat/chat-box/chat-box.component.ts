@@ -18,7 +18,7 @@ export class ChatBoxComponent implements OnInit {
   constructor(private chatService: ChatService,
               private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.activatedRoute.params
     .subscribe(routeParam => {
       this.chatService.getMessages(routeParam.chatroom);

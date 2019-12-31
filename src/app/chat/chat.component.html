@@ -6,7 +6,7 @@
             </li>
         </ul>
         <mat-spinner *ngIf="isLoading" [diameter]="50" class="spinner"></mat-spinner>
-        <mat-icon class="add-chatroom">add_box</mat-icon>
+        <mat-icon class="add-chatroom" (click)="onAddChatroom()">add_box</mat-icon>
     </div>
     <div class="chat-main">
         <router-outlet></router-outlet>

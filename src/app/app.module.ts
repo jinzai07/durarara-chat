@@ -21,6 +21,7 @@ import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
 import { ChatService } from './services/chat.service';
 import { MaterialModule } from './shared/material/material.module';
+import { AddChatroomComponent } from './shared/components/add-chatroom/add-chatroom.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,10 @@ import { MaterialModule } from './shared/material/material.module';
     ChatComponent,
     ChatBoxComponent,
     ChatStartComponent,
-    ChatFormComponent
+    ChatFormComponent,
+    AddChatroomComponent
   ],
+  entryComponents: [AddChatroomComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

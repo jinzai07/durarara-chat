@@ -19,7 +19,7 @@ export class ChatFormComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private chatService: ChatService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initializeForm();
   }
 

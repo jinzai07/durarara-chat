@@ -14,6 +14,12 @@ export class ChatService {
 
   constructor(private afs: AngularFirestore) { }
 
+  createChatroom(name: Chatroom): void {
+    let payload = name;
+    payload.timeCreated = this.getTimeStamp();
+    this.chatroomCollection.add(payload);
+  }
+
   getMessages(chatroom: string): AngularFirestoreCollection<Message> {
     this.messageCollection = this.afs.collection('messages', ref => {
         return ref.where('chatroomName', '==', `${chatroom}`)
@@ -33,6 +39,7 @@ export class ChatService {
   }
 
   getChatroom(): AngularFirestoreCollection<Chatroom> {
+    this.chatroomCollection = this.afs.collection('chatroom');
     return this.afs.collection('chatroom');
   }
 
