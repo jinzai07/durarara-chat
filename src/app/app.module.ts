@@ -22,6 +22,7 @@ import { AuthService } from './services/auth.service';
 import { ChatService } from './services/chat.service';
 import { MaterialModule } from './shared/material/material.module';
 import { AddChatroomComponent } from './shared/components/add-chatroom/add-chatroom.component';
+import { LoginComponent } from './shared/components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,13 @@ import { AddChatroomComponent } from './shared/components/add-chatroom/add-chatr
     ChatBoxComponent,
     ChatStartComponent,
     ChatFormComponent,
-    AddChatroomComponent
+    AddChatroomComponent,
+    LoginComponent
   ],
-  entryComponents: [AddChatroomComponent],
+  entryComponents: [
+    AddChatroomComponent,
+    LoginComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -81,3 +81,8 @@ li:hover {
 .spinner {
     margin: auto;
 }
+
+.dialog-header {
+    font-family: 'Courier Prime', monospace;
+    padding: 5px 5px 20px 5px;
+}

@@ -1,0 +1,14 @@
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-form-field {
+    font-family: 'Courier Prime', monospace;
+}
+
+p {
+    font-family: 'Courier Prime', monospace;
+    font-size: 14px;
+    padding: 10px 0;
+}

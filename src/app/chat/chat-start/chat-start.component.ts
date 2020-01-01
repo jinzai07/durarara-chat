@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogConfig, MatDialog } from '@angular/material';
+import { LoginComponent } from 'src/app/shared/components/login/login.component';
 
 @Component({
   selector: 'app-chat-start',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatStartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit() {
+    const dialogConfig = new MatDialogConfig;
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.hasBackdrop = true;
+    dialogConfig.minWidth = '300px';
+
+    this.matDialog.open(LoginComponent, dialogConfig);
   }
 
 }

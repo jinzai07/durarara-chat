@@ -12,7 +12,7 @@ export class HomepageComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.pw = this.fb.group({
       password: [null, [Validators.required, Validators.minLength(5)]]
     });

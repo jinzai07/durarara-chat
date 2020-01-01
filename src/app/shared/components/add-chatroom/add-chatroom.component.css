@@ -1,4 +1,13 @@
 .dialog-wrapper {
     display: flex;
     flex-direction: column;
+    font-family: 'Courier Prime', monospace;
+}
+
+h2 {
+    padding: 5px 5px 20px 5px;
+}
+
+.mat-form-field {
+    font-family: 'Courier Prime', monospace;
 }
