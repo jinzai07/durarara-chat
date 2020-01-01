@@ -12,3 +12,8 @@ p {
     font-size: 14px;
     padding: 10px 0;
 }
+
+.mat-dialog-content {
+    margin: 10px 0;
+    padding: 0;
+}

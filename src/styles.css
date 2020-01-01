@@ -26,7 +26,7 @@
 
 .btn {
     font-family: 'Roboto', sans-serif;
-    margin: 1em;
+    margin: 1em auto;
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -85,4 +85,8 @@ li:hover {
 .dialog-header {
     font-family: 'Courier Prime', monospace;
     padding: 5px 5px 20px 5px;
+}
+
+.mat-tab-label, .mat-tab-link {
+    font-family: 'Courier Prime', monospace;
 }

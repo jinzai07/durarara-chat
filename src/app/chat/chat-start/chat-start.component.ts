@@ -12,13 +12,15 @@ export class ChatStartComponent implements OnInit {
   constructor(private matDialog: MatDialog) { }
 
   ngOnInit() {
+    this.initializeLoginDialog();
+  }
+
+  private initializeLoginDialog(): void {
     const dialogConfig = new MatDialogConfig;
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
-    dialogConfig.minWidth = '300px';
 
     this.matDialog.open(LoginComponent, dialogConfig);
   }
-
 }
