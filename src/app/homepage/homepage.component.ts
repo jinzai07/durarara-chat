@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor() { }
+  private pw: FormGroup;
+  constructor(private fb: FormBuilder,
+              private router: Router) { }
 
   ngOnInit() {
+    this.pw = this.fb.group({
+      password: [null, [Validators.required, Validators.minLength(5)]]
+    });
   }
 
+  private onAuthenticate(): void {
+    if(this.pw.value.password === 'baccano') {
+      this.router.navigate(['/chat']);
+    } else {
+      alert('Invalid password!');
+    }
+    this.pw.reset();
+  }
 }
