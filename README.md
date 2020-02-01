@@ -1,1 +1,1 @@
-This is a durarara dollars website clone using angular and firebase
+This is a sample chat application inspired from the anime durarara. I made this application to learn the basics of Google's firebase which I used for the backend while I used angular as the front-end framework.
