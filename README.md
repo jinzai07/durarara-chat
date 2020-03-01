@@ -2,23 +2,23 @@
 <p> This is a sample chat application inspired from the anime <a href="https://en.wikipedia.org/wiki/Durarara!!">durarara</a></p>
 
 <h3>Main Technologies/Libraries used:</h3>
-<h4>Frontend framework</h4>
+<h4>Frontend framework:</h4>
 <ul>
     <li>Angular</li>
     <li>RxJS</li>
     <li>Angular material</li>
 </ul>
-<h4>Backend framework/Database</h4>
+<h4>Backend framework/Database:</h4>
 <ul>
-    <li>>Firebase</li>
-    <li>>Angularfire2</li>
+    <li>Firebase</li>
+    <li>Angularfire2</li>
 </ul>
-<h4>Architecture</h4>
+<h4>Architecture:</h4>
 <ul>
     <li>MVC</li>
 </ul>
 
-<p>References:</p>
+<h4>References:</h4>
 <ul> 
     <li>Angular: https://angular.io/ </li>
     <li>RxJS: https://rxjs-dev.firebaseapp.com/ </li>
