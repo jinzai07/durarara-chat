@@ -1,5 +1,5 @@
 <h2> Durarara chat application!</h2>
-<p> This is a sample chat application inspired from the anime <a href="https://en.wikipedia.org/wiki/Durarara!!">durarara</a></p>
+<p> This is a sample chat application inspired from the anime <a href="https://en.wikipedia.org/wiki/Durarara!!">Durarara!!</a></p>
 
 <h3>Main Technologies/Libraries used:</h3>
 <h4>Frontend framework:</h4>
